@@ -3,7 +3,15 @@
 import os
 from openai import OpenAI
 
-token = 'SECRET_TOKEN'  # Replace with your actual token
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables
+
+# from .env file
+# Load environment variables from .env file
+
+
+token = os.getenv("SECRET")  # Replace with your actual token
 endpoint = "https://models.github.ai/inference"
 model = "openai/gpt-4.1-nano"
 
